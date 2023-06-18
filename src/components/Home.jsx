@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import Notes from './Notes';
 import AddNote from './AddNote';
 import data from '../data.json';
+import { Grid } from 'semantic-ui-react';
+
+const { Column } = Grid;
 
 const Home = () => {
 
@@ -14,14 +17,18 @@ const Home = () => {
   };
 
   return (
-    <div className="contentWrapper">
-      <AddNote
-        addNote={addNote}
-      />
-      <Notes
-        notes={notes}
-      />
-    </div>
+    <Grid container>
+      <Column width={16}>
+        <AddNote
+          addNote={addNote}
+        />
+      </Column>
+      <Column width={16}>
+        <Notes
+          notes={notes}
+        />
+      </Column>
+    </Grid>
   );
 };
 
