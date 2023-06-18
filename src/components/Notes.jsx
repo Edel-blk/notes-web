@@ -1,14 +1,13 @@
-import React from "react";
-import data from '../data.json';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Notes = () => {
-  console.log(data);
+const Notes = ({notes}) => {
   return (
     <div>
       <h1>NOTES</h1>
       <div className="notesWrapper">
         {
-          data.map((note, index) => {
+          notes.map((note, index) => {
             return (
               <div key={index} className="note">
                 <div>{note.date}</div>
@@ -21,6 +20,10 @@ const Notes = () => {
       </div>
     </div>
   );
+};
+
+Notes.propTypes = {
+  notes: PropTypes.array,
 };
 
 export default Notes;

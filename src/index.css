@@ -26,6 +26,22 @@ h2 {
   margin: 0px;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding: 4px 6px;
+  margin: 0 0 4px;
+}
+
+textarea {
+  margin-bottom: 4px;
+}
+
 .notesWrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
